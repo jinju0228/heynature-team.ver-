@@ -1,4 +1,7 @@
-
+<ul id="kaTop">
+    <li onclick="getShowCT()"><a class="ka" id="ka" href="javascript:void(0);"></a></li>
+    <li><a class="top" id="top" href="javascript:void(0);"></a></li>
+</ul>
         <section class="w1200" onload="init()">
             <div class="product_wrap">
                 <div class="product_detail">
@@ -79,31 +82,31 @@
                         <div class="product_photoreviews_contents">
                             <ul>
                                 <li> 
-                                    <a href="https://www.instagram.com/p/CBf1LYjF2yl/?utm_source=ig_web_copy_link">
+                                    <a href="https://www.instagram.com/p/CBf1LYjF2yl/?utm_source=ig_web_copy_link" target="_blank">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/p/CBF9rWQlDi-/?utm_source=ig_web_copy_link">
+                                    <a href="https://www.instagram.com/p/CBF9rWQlDi-/?utm_source=ig_web_copy_link" target="_blank">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/p/Br5QRjRh08w/?utm_source=ig_web_copy_link">
+                                    <a href="https://www.instagram.com/p/Br5QRjRh08w/?utm_source=ig_web_copy_link" target="_blank">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/p/CG4ocX1FyUY/?utm_source=ig_web_copy_link">
+                                    <a href="https://www.instagram.com/p/CG4ocX1FyUY/?utm_source=ig_web_copy_link" target="_blank">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/tv/CbEy5XYFMj7/?utm_source=ig_web_copy_link">
+                                    <a href="https://www.instagram.com/tv/CbEy5XYFMj7/?utm_source=ig_web_copy_link" target="_blank">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/p/CZrqZGwv8C1/?utm_source=ig_web_copy_link">
+                                    <a href="https://www.instagram.com/p/CZrqZGwv8C1/?utm_source=ig_web_copy_link" target="_blank">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/p/CDqC0XuFpuh/?utm_source=ig_web_copy_link">
+                                    <a href="https://www.instagram.com/p/CDqC0XuFpuh/?utm_source=ig_web_copy_link" target="_blank">
                                     </a>
                                 </li>
                                 <li>
@@ -160,7 +163,7 @@
                     <div class="product_review_widget">
                         <figure class="event_on">
                             <a>
-                                <img src="../img/lee/20170913223907.jpg">
+                                <img src="../img/lee/lotion_1.jpg">
                             </a>
                             <figcaption>박나*</figcaption>
                         </figure>
@@ -245,22 +248,25 @@
                 </div>
 
                 <!-- 리뷰 1페이지 start -->
-                
+
                 <section class="review_page_section" id="review_section1">
-                    <div class="product_review_comment_wrap">
-                        <div class="product_review_comment">
-                            <div class="product_review_comment_left">
-                                <div class="product_review_comment_star">★★★★★</div>
-                                <div class="product_review_comment_name">정영＊</div>
-                                <div class="product_review_comment_date">2022-05-10</div>
-                            </div>
-                            <div class="product_review_comment_right">
-                                <div class="product_review_comment_detail">화장지우고 나서 사용하면 너무 촉촉해요. 재구매 의향 100%</div>
-                                <div class="product_review_comment_where">알파리뷰에서 작성됨</div>
+                    <%rows.forEach(( row, index )=>{%>
+                        <div class="product_review_comment_wrap">
+                            <div class="product_review_comment">
+                                <div class="product_review_comment_left">
+                                    <span class="star-prototype"><%=row.star%></span>
+                                    <div class="product_review_comment_name"><%=row.username%></div>
+                                    <div class="product_review_comment_date"><%=row.update_time%></div>
+                                </div>
+                                <div class="product_review_comment_right">
+                                    <div class="product_review_comment_detail"><%=row.content%></div>
+                                    <div class="product_review_comment_where">알파리뷰에서 작성됨</div>
+                                </div>
+                                <div class="review_delete" onclick="javascript:location.href='/deletedetail?id=<%=row.id%>'">삭제</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product_review_comment_wrap">
+                    <%})%>
+                    <!-- <div class="product_review_comment_wrap">
                         <div class="product_review_comment">
                             <div class="product_review_comment_left">
                                 <div class="product_review_comment_star">★★★★★</div>
@@ -311,7 +317,7 @@
                                 <div class="product_review_comment_where">알파리뷰에서 작성됨</div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </section>
 
                                 <!-- 리뷰 2페이지 start -->
@@ -474,14 +480,13 @@
         <div  class="dis ev_box_wrap" id="photo1">
             <div class="event_box">
                 <a class="close">X</a>
-                <div class="title_box">
+                <div class="detail_title_box">
                     <h4>Photo Review</h4>
                     <p>김주*</p>
                 </div>
-                <div class="con_box">
+                <div class="con_box2">
                     <div class="event_notice">
                         <div class="event_notice_img_wrap">
-                            <img src="../img/lee/201126003107_ro.jpeg">
                         </div>
                         <div class="pr_option">
                             <div><span>피부타입</span></div>
@@ -502,14 +507,13 @@
         <div  class="dis ev_box_wrap" id="photo2">
             <div class="event_box">
                 <a class="close">X</a>
-                <div class="title_box">
+                <div class="detail_title_box">
                     <h4>Photo Review</h4>
                     <p>박나*</p>
                 </div>
-                <div class="con_box">
+                <div class="con_box2">
                     <div class="event_notice">
-                        <div class="event_notice_img_wrap2">
-                            <img src="../img/lee/20170913223907.jpg">
+                        <div class="event_notice_img_wrap ev_img">
                         </div>
                         <div class="pr_option">
                             <div><span>피부타입</span></div>
@@ -530,7 +534,13 @@
 
         <!-- 리뷰 작성하기 start -->
 
+        <% if(typeof errs !== 'undefined'){ %>
+            <% errs.forEach(()=>{ %>
+                <h3><%= err.param %> : <%= errs.msg %></h3>
+            <% }) %>
+        <% } %>
 
+        <form class="w1200" method="POST" action="/store2">
         <div class="review_write_wrap disnone" id="myModal">
             <div class="review_write_title_wrap">
                 <div class="review_write_title">
@@ -540,6 +550,10 @@
                 <div class="review_write_title2">
                     <p>이 상품의 품질에 대해서 얼마나 만족하시나요?</p>
                 </div>
+            </div>
+            <div class="naming">
+                <div>이름</div>
+                <input type="text" id="username" name="username">
             </div>
             <div class="review_rating">
                 <div class="review_rating_left">
@@ -556,12 +570,26 @@
                     </div> -->
 
                     <div class="starRev">
-                        <span class="starR on">별1</span>
-                        <span class="starR">별2</span>
-                        <span class="starR">별3</span>
-                        <span class="starR">별4</span>
-                        <span class="starR">별5</span>
+                        <span id="star11" class="starR" onclick="star1()">별1</span>
+                        <span id="star22" class="starR" onclick="star2()">별2</span>
+                        <span id="star33" class="starR" onclick="star3()">별3</span>
+                        <span id="star44" class="starR" onclick="star4()">별4</span>
+                        <span id="star55" class="starR" onclick="star5()">별5</span>
                     </div>
+                    <input type="hidden" value="" name="starcount" id="starcount">
+
+                    
+                    <!-- <div class="star-container" id="star">
+
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                      
+                      </div> -->
+
+
 
                 </div>
             </div>
@@ -569,7 +597,7 @@
                 <div class="review_writing_left">상세리뷰</div>
                 <div class="review_writing_right">
                     <div class="review_writing_content">
-                        <textarea placeholder="상품 품질에 대한 고객님의 솔직한 리뷰를 남겨주세요."></textarea>
+                        <textarea id="content" name="content" placeholder="상품 품질에 대한 고객님의 솔직한 리뷰를 남겨주세요."></textarea>
                     </div>
                 </div>
             </div>
@@ -587,14 +615,15 @@
                 </div>
             </div>
 
+
             <div class="review_btn">
-                <button class="submit_btn">등록하기</button>
-                <button class="cancel_btn">취소하기</button>
+                <button type="submit" class="submit_btn">등록하기</button>
+                <button type="button" class="cancel_btn">취소하기</button>
             </div>
 
             </div>
         </div>
-
+    </form>
 
             </section>
             <section class="product_nav_wrap" id="section3">
@@ -703,3 +732,5 @@
                 </div>
             </section>
         </section>
+        <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="js/PRODUCT_DETAIL.JS"></script> -->

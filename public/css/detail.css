@@ -134,7 +134,9 @@ main{
   line-height: 18px;
   width: 50px;
   top: -35%;
-  left: 40%;
+  /* left: 40%; */
+  z-index: 800;
+  right: 80px;
 }
 
 .product_totalprice_middle>span{
@@ -285,28 +287,29 @@ input[name="sum2"]{
 }
 
 .product_checkout{
+  width: 100%;
   display: flex;
+  justify-content: right;
+  margin-top: 30px;
+  justify-content: left;
 }
 
 .product_checkout_left{
   color: #fff;
   background-color: #222;
-  display: inline-block;
-  width: 49.5%;
+  display: block;
   font-weight: 600;
   margin: 4px 0 0 0;
   border: 1px solid #ccc;
   padding: 12px 20px;
   letter-spacing: 1px;
   text-align: center;
-  box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .product_checkout_right{
-  display: inline-block;
-  width: 49.5%;
+  display: block;
   font-weight: 600;
   margin: 4px 0 0 0;
   background: #ffffff;
@@ -315,7 +318,6 @@ input[name="sum2"]{
   padding: 12px 20px;
   letter-spacing: 1px;
   text-align: center;
-  box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -328,7 +330,7 @@ input[name="sum2"]{
   margin: 0 auto;
   padding: 16px 0;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   font-size: 12px;
 }
 
@@ -343,14 +345,14 @@ input[name="sum2"]{
 
 .product_photoreviews_contents{
   height: 145px;
-  margin-top: 1.5em;
+  margin-top: 10px;
   background: #FFFEFC;
 }
 
 .product_photoreviews_contents>ul{
   display: flex;
   justify-content: space-around;
-  margin-top: 1.5em;
+  margin-top: 30px;
 }
 
 .product_photoreviews_contents>li{
@@ -359,23 +361,21 @@ input[name="sum2"]{
 
 .product_photoreviews_contents>ul>li:nth-child(1){
   width: 145px;
-  height: 145px;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(1)>a{
   display: block;
   width: 100%;
-  height: 100%;
   background-image: url(../img/lee/insta/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 100%;
 }
 
 
 .product_photoreviews_contents>ul>li:nth-child(2){
   width: 145px;
-  height: 145px;
   margin-left: 3px;
 }
 
@@ -386,12 +386,11 @@ input[name="sum2"]{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(3){
   width: 145px;
-  height: 145px;
   margin-left: 3px;
 }
 
@@ -402,12 +401,11 @@ input[name="sum2"]{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(4){
   width: 145px;
-  height: 145px;
   margin-left: 3px;
 }
 
@@ -418,12 +416,11 @@ input[name="sum2"]{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(5){
   width: 145px;
-  height: 145px;
   margin-left: 3px;
 }
 
@@ -434,12 +431,11 @@ input[name="sum2"]{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(6){
   width: 145px;
-  height: 145px;
   margin-left: 3px;
 }
 
@@ -450,12 +446,11 @@ input[name="sum2"]{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(7){
   width: 145px;
-  height: 145px;
   margin-left: 3px;
 }
 
@@ -466,12 +461,11 @@ input[name="sum2"]{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(8){
   width: 145px;
-  height: 145px;
   margin-left: 3px;
       position: relative;
 }
@@ -483,14 +477,14 @@ input[name="sum2"]{
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  padding-top: 100%;
 }
 
 .product_photoreviews_contents>ul>li:nth-child(8)::before{
   display: block;
   content: "";
-  width: 145px;
-  height: 145px;
+  width: 100%;
+  padding-top: 100%;
   background-color: rgb(0, 0, 0, 0.7);
   position: absolute;
 }
@@ -513,7 +507,6 @@ input[name="sum2"]{
 
 .product_nav_wrap{
   width: 100%;
-  margin-bottom: 90px;
 }
 
 .product_nav{
@@ -572,7 +565,7 @@ input[name="sum2"]{
 
 
 .picture_wrap{
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .picture_wrap>div{
@@ -769,12 +762,17 @@ input[name="sum2"]{
   padding: 28px 0px;
   border-bottom: 1px solid #e9e9e9;
   display: flex;
+  align-items: center;
 }
 
 .product_review_comment_left{
   display: flex;
   flex-direction: column;
   margin-right: 30px;
+}
+
+.product_review_comment_right{
+  width: 80%;
 }
 
 .product_review_comment_star{
@@ -802,6 +800,26 @@ input[name="sum2"]{
 .product_review_comment_date{
   font-size: 13px;
   color: #91949C;
+}
+
+.review_delete{
+  width: 70px;
+  height: 30px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 4px;
+  vertical-align: top;
+  background: transparent;
+  border: 1px solid #768692;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #3d3e3f;
 }
 
 .product_review_paging{
@@ -863,13 +881,14 @@ input[name="sum2"]{
 .product_review_bottom{
   display: flex;
   position: relative;
+  padding-bottom: 170px;
 }
 
 .product_review_btnbox{
   background-color: #FFFEFC;
   border: 1px solid #cccccc;
   padding: 8px 10px;
-  width: 16%;
+  width: 120px;
   border-radius: 5px;
   font-weight: bold;
   text-align: center;
@@ -939,6 +958,7 @@ input[name="sum2"]{
 
 .product_delivery_wrap{
   width: 100%;
+  padding-bottom: 170px;
 }
 
 .product_delivery_title{
@@ -975,19 +995,19 @@ input[name="sum2"]{
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
   display:none;
-  z-index: 900;
+  z-index: 1222;
 }
 
-.title_box {
-  padding: 10px;
+.detail_title_box {
+  padding: 15px 20px;
   box-sizing: border-box;
 }
-.title_box>h4 {
+.detail_title_box>h4 {
   font-size: 16px;
   font-weight: bold;
   color: #fff;
 }
-.title_box>p {
+.detail_title_box>p {
   font-size: 12px;
   color: #fff;
 }
@@ -1015,17 +1035,16 @@ input[name="sum2"]{
 .event_box>.close {
   color: #fff;
   font-size: 25px;
-  font-weight: bold;
-  float: right;
+  top: 10px;
+  right: 5px;
   padding: 10px;
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
 
-.con_box {
+.con_box2 {
     width: 100%;
-    height: 800px;
     padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -1035,26 +1054,28 @@ input[name="sum2"]{
 
 .event_notice {
     width: 100%;
-    padding-bottom: 125%;
+    padding-bottom: 10%;
     background-size: cover;
     overflow: auto;
-    height: 550px;
     margin-top: -5px;
     
 }
 
 .event_notice_img_wrap{
+  width: 100%;
+  /* height: 500px; */
+  padding-top:100%;
   margin: auto;
-  height: 70%;
   text-align: center;
+  background-image: url(../img/lee/201126003107_ro.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
-
-.event_notice_img_wrap>img {
-  height: 100%;
-  object-fit:cover;
+.ev_img{
+  background-image: url(../img/lee/lotion_1.jpg);
 }
-
-.event_notice_img_wrap2{
+/* .event_notice_img_wrap2{
   margin: auto;
   height: 70%;
   text-align: center;
@@ -1063,14 +1084,14 @@ input[name="sum2"]{
 .event_notice_img_wrap2>img {
   height: 100%;
   object-fit:cover;
-}
+} */
 
 
 .event_box {
   position: fixed;
   width: 60%;
   max-width: 600px;
-  top: 54%;
+  top: 50%;
   left: 50%;
   border-radius: 10px;
   background-color: #e1e9de;
@@ -1081,18 +1102,18 @@ input[name="sum2"]{
   z-index: 99;  
 
 }
-.title_box {
+.detail_title_box {
   width: 100%;
-  padding: 10px;
+  padding: 15px 20px;
   padding-right: 50px;
   box-sizing: border-box;
 }
-.title_box>h4 {
+.detail_title_box>h4 {
   font-size: 16px;
   font-weight: bold;
   color: #222;
 }
-.title_box>p {
+.detail_title_box>p {
   font-size: 12px;
   color: #222;
   font-family: 'NanumBarunGothic';
@@ -1107,15 +1128,15 @@ input[name="sum2"]{
   height: 20px;
   cursor: pointer;
 }
-.con_box {
+/* {
     width: 100%;
-    height: 600px;
+    height: 580px;
     padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-sizing: border-box;
     background-color: #FFFEFC;
-}
+} */
 
 
 
@@ -1219,7 +1240,7 @@ input[name="sum2"]{
   padding: 30px;
   box-sizing: border-box;
   border: 1px solid gray;
-  z-index: 99;
+  z-index: 102;
   /* box-shadow: 1px 1px 0px 1px gray; */
 }
 
@@ -1247,6 +1268,19 @@ input[name="sum2"]{
 .review_write_rating{
   display: flex;
   border-bottom: 1px solid #ddd;
+}
+
+.naming{
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #111;
+  font-weight: bold;
+  display: flex;
+}
+
+.naming>input{
+  display: block;
+  margin-left: 60px;
 }
 
 .review_rating{
@@ -1442,7 +1476,7 @@ input[name="sum2"]{
 }
 
 .starR{
-  background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
+  background: url(../img/lee/ico_review.png) no-repeat right 0;
   background-size: auto 100%;
   width: 30px;
   height: 30px;
@@ -1451,6 +1485,18 @@ input[name="sum2"]{
   cursor: pointer;
 }
 .starR.on{background-position:0 0;}
+
+span.star-prototype, span.star-prototype > * {
+  height: 16px; 
+  background: url(http://i.imgur.com/YsyS5y8.png) 0 -16px repeat-x;
+  width: 80px;
+  display: inline-block;
+}
+
+span.star-prototype > * {
+  background-position: 0 0;
+  max-width:80px; 
+}
 
 .disnone{
   display: none;
@@ -1574,6 +1620,89 @@ input[name="sum2"]{
 }
 
 
+/******************* 별점 *****************/
+
+
+
+.counterW {margin:0 0 0 60px;}
+.ratingW {position:relative; margin:10px 0 0;}
+.ratingW li {display:inline-block; margin:0px;}
+.ratingW li a {display:block; position:relative; /*margin:0 3px;  width:28px; height:27px;color:#ccc; background:url('../img/ico/icoStarOff.png') no-repeat; background-size:100%;*/}
+/*.ratingW li.on a {background:url('../img/ico/icoStarOn.png') no-repeat; background-size:100%;}*/
+
+.star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  border-right: .3em solid transparent;
+  border-bottom: .7em  solid #ddd;
+  border-left: .3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+}
+.star:before, .star:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: .6em;
+  left: -1em;
+  border-right: 1em solid transparent;
+  border-bottom: .7em  solid #ddd;
+  border-left: 1em solid transparent;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+.star:after {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+
+.ratingW li.on .star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  border-right: .3em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left: .3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+}
+.ratingW li.on .star:before, .ratingW li.on .star:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: .6em;
+  left: -1em;
+  border-right: 1em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left: 1em solid transparent;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+.ratingW li.on .star:after {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+
+
+
+
+
+
 
 /******************************************************************/
 
@@ -1642,7 +1771,7 @@ input[name="sum2"]{
   }
 
   .product_photoreviews_contents>ul>li:nth-child(8)::before{
-      width: 110px;
+      width: 100%;
   }
 
   .product_review_btnbox>button>a{
@@ -1657,24 +1786,13 @@ input[name="sum2"]{
     font-size: 12px;
   }
 
-  .product_totalprice_middle{
-    left: 50%;
-  }
-
   .event_box{
     width: 50%;
-    margin-top: 50px;
-    height: 350px;
-    top: 40%;
   }
 
-  .con_box {
+  /* .con_box2 {
     height: 450px;
-  }
-
-  .event_notice{
-    height: 400px;
-  }
+  } */
 
   .pr_option_txt>p{
     font-size: 14px;
@@ -1768,15 +1886,21 @@ input[name="sum2"]{
   }
 
   .product_checkout{
-      justify-content: right;
+      justify-content: center;
   }
 
   .product_checkout_left{
       width: 30%;
+      margin-right: 5px;
   }
 
   .product_checkout_right{
       width: 30%;
+      margin-left: 5px;
+  }
+
+  .product_photoreviews{
+    margin-bottom: 76px;
   }
 
   .product_photoreviews_w768_display{
@@ -1786,8 +1910,10 @@ input[name="sum2"]{
   }
 
   .product_photoreviews_contents{
-      overflow: auto;
+      overflow-x: auto;
+      margin-top: 0px;
       height: 100%;
+
   }
 
   .product_photoreviews_contents>ul{
@@ -1796,47 +1922,38 @@ input[name="sum2"]{
 
   .product_photoreviews_contents>ul>li:nth-child(1){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(2){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(3){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(4){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(5){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(6){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(7){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(8){
       width: 180px;
-      height: 140px;
   }
 
   .product_photoreviews_contents>ul>li:nth-child(8)::before{
       width: 100%;
-      height: 140px;
   }
 
   .product_nav>li>a{
@@ -1875,11 +1992,6 @@ input[name="sum2"]{
       font-size: 12px;
   }
 
-  .product_totalprice_middle{
-    left: 80%;
-    z-index: 99;
-  }
-
   .review_write_wrap{
     top: 11%;
   }
@@ -1904,13 +2016,9 @@ input[name="sum2"]{
     font-size: 11px;
   }
 
-  .con_box {
-    height: 400px;
-  }
-
-  .event_notice {
-    height: 300px;
-  }
+  /* .con_box2 {
+    height: 450px;
+  } */
 
   .pr_option{
     padding: none;
@@ -1931,7 +2039,18 @@ input[name="sum2"]{
   .pr_option_txt>p{
     font-size: 12px;
   }
+
+
 }
 
 
 /***max-width:768px***/
+
+
+
+@media only screen and (max-width: 425px){
+  .font20{
+    font-size: 12px;
+  }
+}
+

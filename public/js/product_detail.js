@@ -109,7 +109,7 @@ var spanes = document.getElementsByClassName("close");
 var funcs = [];
 
 // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
-function Modal(num) {
+function detail_Modal(num) {
     return function() {
       // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
       btns[num].onclick =  function() {
@@ -133,7 +133,7 @@ function Modal(num) {
 
 // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
 for(var i = 0; i < btns.length; i++) {
-    funcs[i] = Modal(i);
+    funcs[i] = detail_Modal(i);
   }
    
   // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
@@ -237,6 +237,7 @@ var span = document.getElementsByClassName("cancel_btn")[0];
 
 var body = document.body
 
+
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -265,6 +266,7 @@ function myfunction(){
   $('tabAnchor_first').addClass('tab_firstcss');
 }
 
+
 /////////별 클릭 시 색깔 바뀌기 + 별 누적/////
 
 var Mystar = $('.mystar');
@@ -285,6 +287,8 @@ $('.starRev span').click(function(){
 });
 
 
+
+
 ///////파일 첨부 버튼 ///////////
 
 window.addEventListener('load', function fileUp(){
@@ -298,3 +302,81 @@ window.addEventListener('load', function fileUp(){
       target2.innerHTML = fileList;
   });
 })
+
+
+/********************* 별점 ******************** */
+$(document).ready(function(){
+$('#star12 a').click(function(){ 
+  $(this).parent().children("a").removeClass("on");    
+  $(this).addClass("on").prevAll("a").addClass("on");
+  console.log($(this).attr("value"));
+});})
+
+
+function star1(){
+  $('input[name=starcount]').attr('value',1);
+}
+function star2(){
+  $('input[name=starcount]').attr('value',2);
+}
+function star3(){
+  $('input[name=starcount]').attr('value',3);
+}
+function star4(){
+  $('input[name=starcount]').attr('value',4);
+}
+function star5(){
+  $('input[name=starcount]').attr('value',5);
+}
+
+///////별 클릭 시 색깔 바뀌기 + 별 누적/////
+function starcount(){
+  var star1 = document.querySelector("#star11")
+  var star2 = document.querySelector("#star22")
+  var star3 = document.querySelector("#star33")
+  var star4 = document.querySelector("#star44")
+  var star5 = document.querySelector("#star55")
+  if(star1.click){
+
+  }
+
+
+  if(star1.click){
+    $('input[name=starcount]').attr('value',1);
+  } else if(star2.click){
+    $('input[name=starcount]').attr('value',2);
+  } else if(star3.click){
+    $('input[name=starcount]').attr('value',3);
+  } else if(star4.click){
+    $('input[name=starcount]').attr('value',4);
+  } else {
+    $('input[name=starcount]').attr('value',5);
+  }
+
+  console.log()
+}
+
+$.fn.generateStars = function() {
+  return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
+};
+
+// 숫자 평점을 별로 변환하도록 호출하는 함수
+$('.star-prototype').generateStars();
+
+
+
+
+/********************* 별점 ******************** */
+
+
+$(function() {
+  $('div#star').raty({
+    score: 3
+    ,path : "img/lee/star1.png"
+    ,width : 200
+    ,click: function(score, evt) {
+      $("#starRating").val(score);
+      $("#displayStarRating").html(score);
+    }
+  });
+});

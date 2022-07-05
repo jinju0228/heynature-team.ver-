@@ -101,8 +101,8 @@ main {
 
 /***section1***/
 .event_sec1 {
-    margin-top: 80px;
-    margin-bottom: 170px;
+    padding-top: 80px;
+    padding-bottom: 170px;
 }
 .event_sec1 * {
     font-family: 'NanumBarunGothic';
@@ -119,7 +119,7 @@ main {
     overflow: hidden;
     position: relative;
 }
-.event_on {
+.event_oning {
     cursor: pointer;
     margin-bottom: 80px;
 }
@@ -134,30 +134,30 @@ main {
     position: absolute;
     bottom: 0;
 }
-.event_on>div:first-child {
+.event_oning>div:first-child {
     padding-bottom: 100%;
     background-size: cover;
     width: 100%;
     position: relative;
     overflow: hidden;
 }
-.event_on>div:first-child>div {
+.event_oning>div:first-child>div {
     position: absolute;
     background-size: cover;
     width: 100%;
     height: 100%;
 }
-.event_on>div:first-child>div:hover {
+.event_oning>div:first-child>div:hover {
     transform: scale(1.05);
     transition: transform 0.6s ease-in-out;
 }
-.event_on h3 {
+.event_oning h3 {
     color: #000;
     font-size: 16px;
     margin-top: 8px;
     font-family: 'Circular-Std-Font';
 }
-.event_on h3>p {
+.event_oning h3>p {
     font-weight: normal;
     font-size: 12px;
     margin-top: 3px;
@@ -232,7 +232,7 @@ main {
 }
 .title_box {
     width: 100%;
-    padding: 10px;
+    padding: 15px 20px;
     padding-right: 50px;
     box-sizing: border-box;
 }
@@ -248,6 +248,8 @@ main {
 }
 .event_box_wrap>.ev_box>.close {
     position: relative;
+    top: 10px;
+    right: 5px;
     color: #222;
     font-size: 25px;
     float: right;
@@ -335,10 +337,10 @@ main {
         padding:0 50px;
         box-sizing: border-box;
     }
-    .event_on h3 {
+    .event_oning h3 {
         font-size: 14px;
     }
-    .event_on a :hover ~h3 {
+    .event_oning a :hover ~h3 {
         transition: all 0.3s;
         font-size: 16px;
     }
@@ -380,13 +382,13 @@ main {
     .e_tab1>li>a {
         font-size: 16px;
     }
-    .event_on h3 {
+    .event_oning h3 {
         font-size: 13px;
     }
-    .event_on a :hover{
+    .event_oning a :hover{
         opacity: 100%;
     }
-    .event_on a :hover ~h3 {
+    .event_oning a :hover ~h3 {
         transition: none;
         font-size: 13px;
     }
@@ -402,10 +404,10 @@ main {
     .event_sec1 li:nth-child(2) {
         margin-top: 0;
     }
-    .event_on h3>p {
+    .event_oning h3>p {
         font-size: 12px;
     }
-    .event_on h3 {
+    .event_oning h3 {
         margin-bottom: 0;
     }
     .bb  {

@@ -287,6 +287,34 @@ body {
     /* padding-bottom: 15px; */
     box-sizing: border-box;
 }
+.ask_title2{
+    position:relative;
+}
+.ask_title2>span{
+    font-size: 0.7em;
+    height: 25px;
+    line-height: 25px;
+    top: -15px;
+    position: absolute;
+    transition: all 0.4s;
+    color: #888;
+}
+.ask_title2>h1{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.ask_title2>p{
+    margin-bottom: 5px;
+}
+
+.ask_title2>input{
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 40px;
+    background-color: #FFFEFC;
+}
 
 .ask_title>h1{
     font-size: 28px;
@@ -314,9 +342,8 @@ body {
 .notice_txt_wrap{
     border-bottom: 1px solid #c7c1ba;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     margin-top: 15px;
+
 }
 
 .notice_txt_wrap:first-child{
@@ -333,10 +360,10 @@ body {
     padding: 30px 15px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
 }
 
 .ask_txt{
-    height: 25px;
     line-height: 25px;
     color: #222;
     font-size: 16px;
@@ -546,6 +573,59 @@ body {
     transition: all 0.4s;
 }
 
+/****************/
+.ask_content2{
+    position:relative;
+}
+.ask_content2>input{
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 40px;
+}
+
+.ask_content2>span{
+    position: absolute;
+    font-size: 0.7em;
+    height: 40px;
+    display: block;
+    color: #888;
+    top: -15px;
+}
+
+
+
+.ask_content2>textarea{
+    outline: none;
+    border: none;
+    background: none;
+    resize: none;
+    height: 160px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.update_submit{
+    margin: auto;
+}
+
+.update_submit>input{
+    margin: auto;
+    width: 100px;
+    height: 45px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    display: block;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'NanumBarunGothic';
+    letter-spacing: 2px;
+}
+
+
 .ask_attach{
     padding-top: 40px;
 }
@@ -683,10 +763,26 @@ body {
     letter-spacing: 2px;
 }
 
-.notice_date>span{
-    display: block;
+.ask_submit2>input{
+        margin: auto;
+        width: 100px;
+        height: 45px;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        display: block;
+        border: 0;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'NanumBarunGothic';
+        letter-spacing: 2px;
+}
+
+.notice_date>{
+    width: 100px;
+    display: inline-block;
     font-size: 15px;
-    float:right;
     font-family: 'Noto Sans KR', '맑은 고딕', 'AppleGothic', 'Dotum', '돋움', 'sans-serif';
 }
 
@@ -713,15 +809,17 @@ body {
 }
 
 .notice_txt{
+    width: calc(100% - 120px);
     height: 25px;
     line-height: 25px;
     padding: 30px 15px;
 
     /* 말줄임표 */
-    display:block;
+    display:inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-sizing: border-box;
 }
 
 .notice_txt>a{
@@ -812,11 +910,38 @@ body {
 }
 
 .notice_panel{
-    padding: 0 18px;
+    width:100%;
+    padding: 30px 50px 10px;
+    box-sizing: border-box;
     display: none;
-    background-color: white;
+    background-color: rgba(249, 244, 230, 0.3);
     overflow: hidden;
     transition: all 0.4s;
+    border-top: 1px solid #c7c1ba;
+}
+
+.notice_content_btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    margin-right:-20px;
+}
+
+.notice_content_btn>div{
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    border-radius: 4px;
+    vertical-align: top;
+    background: transparent;
+    border: 1px solid #768692;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #3d3e3f;
 }
 
 
@@ -827,6 +952,7 @@ body {
     border-bottom: 1px solid #c7c1ba;
     width: 100%;
     display: flex;
+    padding-bottom: 30px;
 }
 
 .qna_txt_wrap_last{
@@ -841,14 +967,21 @@ body {
     line-height: 25px;
     padding: 30px 15px;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .qna_txt_right{
+    display: block;
+    width: calc(100% - 110px);
     height: 25px;
     line-height: 25px;
     padding: 30px 15px;
     white-space: nowrap;
-
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
    
 }
 
@@ -869,6 +1002,9 @@ body {
     font-family: 'NanumBarunGothic';
     padding: 1px 6px;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .qna_txt_right>.notice_Slide3{
@@ -1195,6 +1331,11 @@ main{
 .hidden{
     display: none;
 }
+.notipw{
+    padding-left:11px;
+    box-sizing: border-box;
+    
+}
 
 /******************************************************************/
 
@@ -1379,6 +1520,7 @@ main{
     .h5{
         font-size: 13px;
     }
+
 }
 
 
@@ -1386,5 +1528,19 @@ main{
 @media only screen and (max-width: 606px) {
     .cs_tab1>li{
         padding:0 40px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .notice_title>h1{
+        font-size: 20px;
+    }
+
+    .ask_txt{
+        font-size: 14px;
+    }
+
+    .h3{
+        font-size: 20px;
     }
 }

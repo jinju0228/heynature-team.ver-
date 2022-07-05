@@ -6,56 +6,47 @@ $menuEle.click(function() { // 탭메뉴 클릭 이벤트
 
 ///////////////////////////////////////////////////////// 자주묻는 질문 Q&A END
 
-//nn
 
 ///////// cs center 컨텐츠 내용 보이기
 
-// jQuery(document).ready(function(){
-//     console.log('test')
-//     $('.notice_Slide1').click(function(){
-//         $('.notice_contents_detail').slideToggle(700);
-//     })
+jQuery(document).ready(function(){
+    console.log('test')
+    $('.notice_Slide1').click(function(){
+        $('.notice_contents_detail').slideToggle(700);
+    })
 
-//     $('.notice_Slide2').click(function(){
-//         $('.qna_contents_detail').slideToggle(500);
-//     })
+    $('.notice_Slide2').click(function(){
+        $('.qna_contents_detail').slideToggle(500);
+    })
 
-//     $('.notice_Slide3').click(function(){
-//         $('.qna_contents_detail2').slideToggle(500);
-//     })
+    $('.notice_Slide3').click(function(){
+        $('.qna_contents_detail2').slideToggle(500);
+    })
 
-//     $('.notice_Slide4').click(function(){
-//         $('.qna_contents_detail3').slideToggle(500);
-//     })
+    $('.notice_Slide4').click(function(){
+        $('.qna_contents_detail3').slideToggle(500);
+    })
 
-//     $('.notice_Slide5').click(function(){
-//         $('.qna_contents_detail4').slideToggle(500);
-//     })
+    $('.notice_Slide5').click(function(){
+        $('.qna_contents_detail4').slideToggle(500);
+    })
 
-//     $('.notice_Slide6').click(function(){
-//         $('.qna_contents_detail5').slideToggle(500);
-//     })
+    $('.notice_Slide6').click(function(){
+        $('.qna_contents_detail5').slideToggle(500);
+    })
 
-//     $('.notice_Slide7').click(function(){
-//         $('.qna_contents_detail6').slideToggle(500);
-//     })
+    $('.notice_Slide7').click(function(){
+        $('.qna_contents_detail6').slideToggle(500);
+    })
+})
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+////공지사항 클릭 시 하나씩만 보이기(jquery)
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-
-    if (panel.style.display === "none") {
-      panel.style.display = "block";
-    } else {
-      panel.style.display = "none";
-    }
-
-  });
-}
+$('.accordion').click(function(e){
+    e.preventDefault();
+    $(this).next(".notice_panel").css('display', 'block');
+    $('.accordion').not($(this)).next(".notice_panel").css('display', 'none');
+})
 
 /////////////////////// contents 버튼 작동시 bold 추가
 
@@ -443,3 +434,12 @@ window.onload = function(){
         target2.innerHTML = fileList;
     });
 }
+
+function checkPw(){
+    var pw = document.getElementById('pw').value;
+   if(pw !== "123456"){
+       alert('관리자가 아닙니다')
+       return false
+   } else{
+       return true
+   }}

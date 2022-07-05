@@ -58,8 +58,8 @@ header{
     
 }
 #mySidedark{
-    position:relative;
-    top:-50px;
+    position:fixed;
+    top:0;
     left:0;
     display:none;
     background-color: rgba(0,0,0,0.4);
@@ -94,7 +94,17 @@ header{
   .sidenav a:hover {
     color: #f1f1f1;
   }
-  
+  .sidenav .sidehome {
+    padding: 8px 8px 8px 32px;
+    position: absolute;
+    top: 38px;
+    /* left: 25px; */
+    font-size: 36px;
+}
+.sidenav .sidehome>img{
+    width: 35px;
+    height:35px;
+}
   .sidenav .closebtn {
     position: absolute;
     top: 30px;
@@ -339,15 +349,20 @@ footer p{
 .yt_icon{
     background-image: url(../img/park/yt_icon.png);
 }
+
+
 #kaTop{
+    width:50px;
+    height:110px;
     position:fixed;
-    z-index: 5;
+    z-index: 7;
     display:none;
 }
 .ka_top1{
     position:fixed;
     right:15px; 
     bottom:15px;
+    
 }
 .ka_top2{
     position:fixed;
@@ -356,7 +371,7 @@ footer p{
     transform: translateY(-50%);
     opacity: 0.6;
 }
-.ka_top a{
+.ka, .top{
     display:block;
     width:50px;
     height:50px;
@@ -376,6 +391,10 @@ footer p{
     .f_inner{
         width:100%;
     }
+    .f_notice{
+        width:100%;
+    }
+
 }
 @media only screen and (max-width: 1024px) {
     .w1200{

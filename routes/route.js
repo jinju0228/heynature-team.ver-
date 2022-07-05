@@ -20,7 +20,7 @@ router.get('/',(req, res) =>{
 /* notice */
 router.get('/cscenter',(req, res,next) =>{
     db.getAllNotice((rows) => {
-        res.render('cscenter',{ rows : rows }); 
+        res.render('cscenter',{ rows : rows });
     })
 });
 
@@ -79,7 +79,7 @@ router.post('/updatenotice' ,
                 res.render('updatenotice', {row: row[0], errs: errs['errors']} )
             });
         } else{ //에러가 없다면 notice 수정하기
-            db.updatenoticeById(id, title, content, ()=> {
+            db.updateNoticeById(id, title, content, ()=> {
                 res.redirect('/cscenter');
             });
         }
@@ -91,6 +91,52 @@ router.get('/deleteNotice',(req,res)=>{
         res.redirect('/cscenter');
     });
 });
+
+
+
+/* review_write */
+router.get('/detail',(req, res,next) =>{
+    db.getAlldetail((rows) => {
+        res.render('detail',{ rows : rows }); 
+    })
+});
+
+router.get('/detail', (req,res,next) => {
+    res.render('detail');
+})
+
+router.get('/review_write', (req,res,next) => {
+    res.render('review_write');
+})
+
+router.post('/store2',
+ [check('content').isLength({min:1, max:3000})],
+ function(req,res,next){
+    //let errs = validationResult(req);
+    
+    // if(errs['errors'].length > 0){ //에러가 있다면, 화면에 에러 출력하기
+    //     res.render('newNotice',{errs : errs['errors']});
+    // }else{ //에러 없으면 실행
+        let param = JSON.parse(JSON.stringify(req.body));
+        let content = param['content'];
+        let username = param['username'];
+        let starcount = param['starcount'];
+        
+        db.insertdetail(username,content, starcount, () => { //
+            console.log("submit");
+            res.redirect('/detail');
+        })
+    // }
+});
+
+router.get('/deletedetail',(req,res)=>{
+    let id = req.query.id;
+    db.deletedetailById(id, ()=>{
+        res.redirect('/detail');
+    });
+});
+
+
 
 
 

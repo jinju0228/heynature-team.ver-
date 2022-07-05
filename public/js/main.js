@@ -63,4 +63,29 @@ $(function() {
 //   })
 
 
+$(window).scroll(function(){
+  var scrT = $(window).scrollTop();
+  var kaTop = document.querySelector("#chTop");
+  console.log(scrT); //스크롤 값 확인용
+  if(scrT == $(document).height() - $(window).height()){
+    $(kaTop).removeClass('chTop1')
+    $(kaTop).addClass('chTop2')
+  } else {
 
+    $(kaTop).removeClass('chTop2')
+    $(kaTop).addClass('chTop1')
+  }
+});
+
+function getShowCT(){
+  /* 채널톡 열기 */
+  document.getElementById("ch").style.display = "block";
+  document.getElementById("ka").style.display = "none";
+  document.getElementById("top").style.display = "none";
+}
+function getHideCT(){
+  /* 채널톡 닫기 */
+  document.getElementById("ch").style.display = "none";
+  document.getElementById("ka").style.display = "block";
+  document.getElementById("top").style.display = "block";
+}

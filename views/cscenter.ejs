@@ -1,6 +1,9 @@
 
         <section class="cs_sec cs_w1200">
-            
+            <ul id="kaTop">
+                <li onclick="getShowCT()"><a class="ka" id="ka" href="javascript:void(0);"></a></li>
+                <li><a class="top" id="top" href="javascript:void(0);"></a></li>
+            </ul>
             <h3>CS CENTER</h3>
             <div class="cs_tabs">
                 <ul class="cs_tab1">
@@ -25,132 +28,21 @@
                             
                             <%rows.forEach(( row, index )=>{%>
                                 <div class="notice_txt_wrap">
-                                    <div class="notice_main_title">
-                                        <div class="notice_txt accordion">​​​​<%=row.title%></div>
-                                            <div class="notice_panel">
+                                    <div class="notice_main_title accordion">
+                                        <div class="notice_txt ">​​​​<%=row.title%></div>
+                                        <span class="notice_date"><%=row.update_time%></span>
+                                    </div>
+                                    <div class="notice_panel">
                                                 
-                                                    <%=row.content%>
-                                                    <div onclick="javascript:location.href='/updateNotice?id=<%=row.id%>'">수정</div>
-                                                    <div onclick="javascript:location.href='/deleteNotice?id=<%=row.id%>'">삭제</div>
-
-                                            </div>
-
+                                        <%=row.content%>
+                                        <div class="notice_content_btn">
+                                            <div onclick="javascript:location.href='/updateNotice?id=<%=row.id%>'">수정</div>
+                                            <div onclick="javascript:location.href='/deleteNotice?id=<%=row.id%>'">삭제</div>
                                         </div>
-                                        <div class="notice_date"><span><%=row.update_time%></span></div>
+
+                                    </div>
                                 </div>
                             <%})%>
-
-                            <div class="notice_txt_wrap">
-                                <div class="notice_main_title">
-                                    <div class="notice_txt accordion">​​어성초 한지 마스크 시트 리뉴얼 안내</div>
-                                        <div class="notice_panel">
-                                                <div class="notice_contents_detail_img">
-                                                    <img src="img/lee/notice mask.jpg">
-                                                </div>
-                                                안녕하세요. 헤이네이처입니다.
-                                                <br>
-                                                <br>
-                                                오랜 시간 기다려주신 어성초 마스크가 리뉴얼 되어 돌아왔습니다!
-                                                <br>
-                                                <br>
-                                                <p class="bold normal_font">1. 성분은 그대로!</p>
-                                                <br>
-                                                시트 외 성분 및 용량 등은 모두 기존과 동일합니다 :)
-                                                <br>
-                                                <br>
-                                                <p class="bold normal_font">2. 한지 시트 업그레이드!</p>
-                                                <br>
-                                                - 닥나무(한지) 속껍질인 백피만 100% 사용하여 더욱 부드럽게!
-                                                <br>
-                                                - 생분해, 비건 인증 완료한 친환경 시트
-                                                <br>
-                                                오랜 시간 기다려주셔서 감사드리며,
-                                                <br>
-                                                <br>
-                                                좋은 제품으로 보답드릴 수 있게 노력하겠습니다 :)
-                                                <br>
-                                                <br>
-                                                감사합니다.                                            
-                                        </div>
-                                    </div>
-                                    <div class="notice_date"><span>2022.05.04</span></div>
-                            </div>
-                                
-                            <div class="notice_txt_wrap">
-                                <div class="notice_txt"><a class="weight600" href="">2022년 5월 5일 휴무 안내</a></div>
-                                <div class="notice_date"><span>2022.05.04</span></div>
-                            </div>
-                            <div class="notice_txt_wrap">
-                                <div class="notice_txt">​​<a class="weight600" href="">어성초 한지 마스크 2차 재입고 수량 품절 안내</a></div>
-                                <div class="notice_date"><span>2022.05.02</span></div>
-                            </div>
-                            <div class="notice_txt_wrap">
-                                <div class="notice_txt"><a class="weight600" href="">어성초 한지 마스크 한정 수량 재입고 안내</a></div>
-                                <div class="notice_date"><span>2022.04.21</span></div>
-                            </div>
-                            <div class="notice_txt_wrap">
-                                <div class="notice_txt">​​<a href="">NEW 어성초 톤업 마스크 출시</a></div>
-                                <div class="notice_date"><span>2022.04.12</span></div>
-                            </div>
-                            <div class="notice_txt_wrap">
-                                <div class="notice_txt">​​<a href="">어성초 마스크 품절 안내</a></div>
-                                <div class="notice_date"><span>2022.04.12</span></div>
-                            </div>
-                            <div class="notice_txt_wrap">
-                                <div class="notice_txt"><a href="">​​2022년 3월 9일 휴무 안내</a></div>
-                                <div class="notice_date"><span>2022.02.24</span></div>
-                            </div>
-
-                            <!-- 더보기 버튼 2페이지 화면 -->
-
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt">​​<a href="">2022년 3·1절 휴무 안내</a></div>
-                                <div class="notice_date"><span>2022.02.24</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt">​​<a href="">배송 출고 마감 시간 확대 안내(5PM)</a></div>
-                                <div class="notice_date"><span>2022.02.07</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt">​​<a href="">미사용 적립금 소멸 안내(22.02.24)</a></div>
-                                <div class="notice_date"><span>2022.01.21</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt"><a href="">어성초 로션 용기 리뉴얼 안내</a></div>
-                                <div class="notice_date"><span>2022.01.03</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt">​​<a href="">2021 12/31 배송 안내</a></div>
-                                <div class="notice_date"><span>2021.12.30</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt"><a href="">어성초 스킨(산뜻) 용기 리뉴얼 안내</a></div>
-                                <div class="notice_date"><span>2021.10.15</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt">​​<a href="">2021 10/11 휴무 안내</a></div>
-                                <div class="notice_date"><span>2022.10.08</span></div>
-                            </div>
-
-                            <!-- 더보기 버튼 3페이지 화면 -->
-
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt"><a href="">제주 지역 발송 지연 안내</a></div>
-                                <div class="notice_date"><span>2021.09.13</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt">​​<a href="">2021 추석 연휴 안내</a></div>
-                                <div class="notice_date"><span>2021.09.10</span></div>
-                            </div>
-                            <div class="notice_txt_wrap" style="display:none">
-                                <div class="notice_txt"><a href="">올리브영 입점 안내 드립니다.</a></div>
-                                <div class="notice_date"><span>2022.08.27</span></div>
-                            </div>
-                            <div class="cs_more_btn">
-                                <a href="javascript:void(0);" class="cs_more_tab1">
-                                    더보기 <span>(<span class="currentPage">1</span> / <span class="totalPage">3</span>)</span>  ▼
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -638,6 +530,5 @@
                 </div>
             </div>
         </section>
-
 
        
